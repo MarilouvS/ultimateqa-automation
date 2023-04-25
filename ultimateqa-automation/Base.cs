@@ -17,9 +17,6 @@ namespace ultimateqa_automation
             Driver = driver;
             Wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         }
-        public HomePage HomePage()
-        {
-            return new HomePage(Driver);
-        }
+
     }
 }
