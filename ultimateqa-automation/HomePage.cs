@@ -9,12 +9,7 @@ namespace ultimateqa_automation
 {
     internal class HomePage : Base
     {
-        public HomePage(IWebDriver driver) : base (driver) { }
+        public HomePage(IWebDriver driver) : base(driver) { }
         public void GoToHomePage() => Driver.Navigate().GoToUrl("https://ultimateqa.com/");
     }
-
-    //public HomePage HomePageInstance()
-    //{
-    //    return new HomePage(Driver);
-    //}
 }
