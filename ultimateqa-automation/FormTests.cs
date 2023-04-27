@@ -23,7 +23,7 @@ namespace ultimateqa_automation
         public void FormWithCaptcha()
         {         
             formPageInstance.NameInput.SendKeys("Awesome Tester");
-            formPageInstance.MessageInput.SendKeys("Louis: suig my tollie");
+            formPageInstance.MessageInput.SendKeys("Insert inspiring message here");
             formPageInstance.SolveAndCompleteCaptcha();
             formPageInstance.CaptchaSubmitButton.Click();
             Assert.AreEqual("Thanks for contacting us", formPageInstance.SuccessMessageCaptchaForm.Text);

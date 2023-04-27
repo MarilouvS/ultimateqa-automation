@@ -20,11 +20,14 @@ namespace ultimateqa_automation
         public IWebElement CaptchaSubmitButton => Driver.FindElement(By.XPath(CaptchaSubmitButtonXPath));
         public IWebElement CaptchaInput => Driver.FindElement(By.XPath(CaptchaInputXPath));
 
-        public IWebElement SuccessMessageCaptchaForm => Wait.Until(webDriver => {
+        public IWebElement SuccessMessageCaptchaForm => Wait.Until(webDriver =>
+        {
             var element = webDriver.FindElement(By.XPath(SuccessMessageXPath));
 
             if (string.IsNullOrEmpty(element.Text))
+            {
                 return null;
+            }
 
             return element;
         });

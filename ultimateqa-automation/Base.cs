@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -12,11 +13,16 @@ namespace ultimateqa_automation
     {
         protected IWebDriver Driver { get; set;  }
         protected WebDriverWait Wait { get; set; }
+        protected Actions Actions { get; set; }
+
         public Base(IWebDriver driver) 
         {
             Driver = driver;
             Wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            Actions = new Actions(Driver);
         }
+
+        
 
     }
 }
